@@ -11,54 +11,234 @@
   <meta property="og:url" content="https://javisetty03.github.io/" />
   <meta property="og:image" content="assets/og-image.png" />
   <link rel="icon" href="assets/favicon.ico" />
-
-  <!-- Google tag (gtag.js) — private analytics for AJ only -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGZ9D89GSK"></script>
-  <script>
-    // Respect "Do Not Track" if you want (optional: set to true to honor DNT)
-    const HONOR_DNT = false;
-    const dntEnabled = HONOR_DNT && (
-      navigator.doNotTrack == "1" || window.doNotTrack == "1" || navigator.msDoNotTrack == "1"
-    );
-
-    if (!dntEnabled) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-LGZ9D89GSK'); // GA4 property
-    }
-  </script>
-
   <style>
-    :root { --bg:#0b1220; --card:#121a2b; --text:#e6eefc; --muted:#9fb3d1; --accent:#0a84ff; --chip:#1a2740; }
-    *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; }
-    a{ color:var(--accent); text-decoration:none; } a:hover{ text-decoration:underline; }
-    .container{ max-width:980px; margin:0 auto; padding:32px 20px 80px; }
-    header{ display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-bottom:28px; }
-    header img{ width:84px; height:84px; border-radius:14px; object-fit:cover; border:1px solid #1c2a46; }
-    .title{ flex:1; min-width:260px; }
-    h1{ margin:0 0 6px; font-size:28px; }
-    .subtitle{ color:var(--muted); font-weight:500; }
-    .links{ display:flex; flex-wrap:wrap; gap:12px; margin-top:8px; }
-    .chip{ background:var(--chip); padding:8px 12px; border-radius:999px; display:inline-flex; gap:8px; align-items:center; color:var(--text); }
-    .grid{ display:grid; grid-template-columns:1fr; gap:16px; }
-    @media (min-width:860px){ .grid{ grid-template-columns:1fr 1fr; } }
-    section{ background:var(--card); border:1px solid #17243f; border-radius:16px; padding:20px; }
-    h2{ margin:0 0 12px; font-size:18px; letter-spacing:.2px; color:#d7e6ff; }
-    ul{ margin:8px 0 0 18px; }
-    li{ margin:6px 0; }
-    .role{ display:flex; justify-content:space-between; gap:12px; color:var(--muted); font-size:14px; margin-top:4px; }
-    .role strong{ color:var(--text); }
-    .item{ padding:10px 0; border-top:1px solid #17243f; }
-    .item:first-child{ border-top:none; }
-    .item h3{ margin:0 0 6px; font-size:16px; color:#e9f1ff; }
-    .item .meta{ color:var(--muted); font-size:13px; display:flex; gap:8px; flex-wrap:wrap; }
-    .badges{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
-    .kbd{ background:#0f1a31; border:1px solid #243a6a; padding:4px 8px; border-radius:8px; font-size:12px; color:#cfe0ff; }
-    .footer{ margin-top:20px; color:var(--muted); font-size:13px; text-align:center; }
-    .btn{ display:inline-block; padding:10px 14px; background:var(--accent); color:white; border-radius:10px; font-weight:600; }
-    .btn:hover{ opacity:.92; text-decoration:none; }
-    .spacer{ height:10px; }
+    :root {
+      --bg: #0b1220; --card: #121a2b; --text: #e6eefc; --muted: #9fb3d1; --accent: #0a84ff; --chip: #1a2740;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; }
+    a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
+    .container { max-width: 980px; margin: 0 auto; padding: 32px 20px 80px; }
+    header { display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-bottom: 28px; }
+    header img { width: 84px; height: 84px; border-radius: 14px; object-fit: cover; border:1px solid #1c2a46; }
+    .title { flex:1; min-width:260px; }
+    h1 { margin:0 0 6px; font-size:28px; }
+    .subtitle { color: var(--muted); font-weight:500; }
+    .links { display:flex; flex-wrap:wrap; gap:12px; margin-top:8px; }
+    .chip { background: var(--chip); padding:8px 12px; border-radius:999px; display:inline-flex; gap:8px; align-items:center; color:var(--text); }
+
+    .grid { display:grid; grid-template-columns:1fr; gap:16px; }
+    @media (min-width: 860px) { .grid { grid-template-columns:1fr 1fr; } }
+
+    section { background: var(--card); border:1px solid #17243f; border-radius:16px; padding:20px; }
+    h2 { margin:0 0 12px; font-size:18px; letter-spacing:.2px; color:#d7e6ff; }
+    ul { margin:8px 0 0 18px; }
+    li { margin:6px 0; }
+    .role { display:flex; justify-content:space-between; gap:12px; color:var(--muted); font-size:14px; margin-top:4px; }
+    .role strong { color:var(--text); }
+
+    /* helpers for new sections */
+    .item { padding:10px 0; border-top:1px solid #17243f; }
+    .item:first-child { border-top:none; }
+    .item h3 { margin:0 0 6px; font-size:16px; color:#e9f1ff; }
+    .item .meta { color:var(--muted); font-size:13px; display:flex; gap:8px; flex-wrap:wrap; }
+    .badges { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+    .kbd { background:#0f1a31; border:1px solid #243a6a; padding:4px 8px; border-radius:8px; font-size:12px; color:#cfe0ff; }
+
+    .footer { margin-top: 20px; color: var(--muted); font-size: 13px; text-align:center; }
+    .btn { display:inline-block; padding:10px 14px; background:var(--accent); color:white; border-radius:10px; font-weight:600; }
+    .btn:hover { opacity:.92; text-decoration:none; }
+    .spacer { height:10px; }
   </style>
 </head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <img src="assets/profile.jpg" alt="AJ headshot" onerror="this.style.display='none'">
+      <div class="title">
+        <h1>Anjaneyulu Javisetty (AJ)</h1>
+        <div class="subtitle">AI / Power Platform Engineer — Overland Park, KS</div>
+        <div class="links">
+          <a class="chip" href="mailto:javisetty07@gmail.com">📧 javisetty07@gmail.com</a>
+          <span class="chip">📞 +1 (716) 791-7717</span>
+          <a class="chip" href="https://www.linkedin.com/in/aj-048a0b144/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+          <a class="chip" href="resume/AJ_Resume.pdf" target="_blank" rel="noreferrer">⬇️ Download Résumé (PDF)</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Top grid: summary + selected projects -->
+    <div class="grid">
+      <section>
+        <h2>Summary</h2>
+        <ul>
+          <li>AI / Power Platform Engineer delivering enterprise apps on Microsoft stack (Power Apps, Power Automate, Dataverse, Azure Functions, Azure OpenAI).</li>
+          <li>Zero-to-one builder: start from scratch, own delivery, and scale with measurable outcomes.</li>
+          <li>Trainer & mentor with 20K+ students coached across universities in India.</li>
+        </ul>
+        <div class="spacer"></div>
+        <div class="badges">
+          <span class="kbd">Power Apps</span><span class="kbd">Power Automate</span><span class="kbd">Dataverse</span>
+          <span class="kbd">Azure Functions</span><span class="kbd">Azure OpenAI</span><span class="kbd">Java</span>
+          <span class="kbd">Python</span><span class="kbd">Power BI</span><span class="kbd">AI Builder</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects (Selected)</h2>
+        <ul>
+          <li><strong>Certificate Tracking</strong> — AI Builder/Azure DI processing; SPN governance; flows & Dataverse; CSV/PDF exports.</li>
+          <li><strong>Smart Work Locator</strong> — Check-in/out, active hours, trend analytics; reverse geocoding; exports; admin dashboards.</li>
+          <li><strong>AI Document Processor</strong> — Split/validate PDFs; process valid pages via AI Builder; push results to Dataverse.</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Education & Certifications (core) -->
+    <section>
+      <h2>Education & Certifications</h2>
+      <ul>
+        <li><strong>Master in Information Studies</strong> — Trine University, Detroit, MI (Jul 2023)</li>
+        <li><strong>Bachelor in CSE</strong> — Chalapathi Institute of Technology, India (Nov 2019)</li>
+      </ul>
+    </section>
+
+    <!-- New: Projects block (your additional items) -->
+    <section>
+      <h2>Projects</h2>
+
+      <div class="item">
+        <h3>Accident Intimating Device</h3>
+        <div class="meta">Role: Lead • Focus: Embedded + Cloud alerting</div>
+        <ul>
+          <li>On-device impact/geo detection with immediate alert workflow to emergency contacts/services.</li>
+          <li>Prototyped incident log pipeline for post-event analytics and reliability insights.</li>
+        </ul>
+        <div class="badges"><span class="kbd">IoT</span><span class="kbd">Edge</span><span class="kbd">Alerts</span></div>
+      </div>
+
+      <div class="item">
+        <h3>Anti-Corruption Reporting (Campus/Community)</h3>
+        <div class="meta">Role: Organizer & Builder • Focus: Reporting + Transparency</div>
+        <ul>
+          <li>Simple, trackable intake to log complaints and route to responsible bodies with status visibility.</li>
+          <li>Awareness sessions increased reporting confidence and participation.</li>
+        </ul>
+        <div class="badges"><span class="kbd">CivicTech</span><span class="kbd">Workflow</span><span class="kbd">Transparency</span></div>
+      </div>
+
+      <div class="item">
+        <h3>Smart Work Locator (Office Project)</h3>
+        <div class="meta">Role: Builder • Tech: Power Apps, Power Automate, Azure Functions, Power BI</div>
+        <ul>
+          <li>Check-in/out, active-hours tracking, trends, and alerts; delegation-safe logic at scale.</li>
+          <li>Reverse geocoding for dynamic locations; CSV/PDF exports; admin analytics.</li>
+        </ul>
+        <div class="badges"><span class="kbd">Power Apps</span><span class="kbd">Azure</span><span class="kbd">Power BI</span></div>
+      </div>
+    </section>
+
+    <!-- New: Leadership & Activities -->
+    <section>
+      <h2>Leadership & Activities</h2>
+
+      <div class="item">
+        <h3>Chief Student Organizer — Technical & Non-Technical Fests</h3>
+        <div class="meta">Chalapathi Institute of Technology • 2nd year → Final year</div>
+        <ul>
+          <li>Led end-to-end fest ops (programming, logistics, sponsors, judges) across multiple annual events.</li>
+          <li>Standardized rubrics and volunteer playbooks to streamline scoring and operations.</li>
+        </ul>
+        <div class="badges"><span class="kbd">Program Ops</span><span class="kbd">Sponsorships</span><span class="kbd">Volunteer Mgmt</span></div>
+      </div>
+
+      <div class="item">
+        <h3>Cricket Captain</h3>
+        <div class="meta">Undergrad Team • Kansas Cricket Premier League & Midwest Cricket Leagues (current)</div>
+        <ul>
+          <li>Captain and organizer for competitive squads; established training cadence and match strategy.</li>
+        </ul>
+        <div class="badges"><span class="kbd">Team Leadership</span><span class="kbd">Strategy</span><span class="kbd">Sports</span></div>
+      </div>
+
+      <div class="item">
+        <h3>Strength: Zero-to-One Builder</h3>
+        <div class="meta">“Start from scratch and reach the top seat”</div>
+        <ul>
+          <li>Owns full lifecycle — ideation → execution → scale — with measurable outcomes.</li>
+        </ul>
+        <div class="badges"><span class="kbd">Entrepreneurial</span><span class="kbd">Ownership</span></div>
+      </div>
+    </section>
+
+    <!-- New: Freelancing & Training -->
+    <section>
+      <h2>Freelancing & Training</h2>
+      <div class="item">
+        <h3>Technical & Soft-Skills Trainer</h3>
+        <div class="meta">Across universities in India • 20,000+ students mentored</div>
+        <ul>
+          <li>Workshops on Core Java, DSA, SQL, and professional communication/interview prep.</li>
+          <li>Outcome-oriented curricula with mock interviews aligned to industry roles.</li>
+        </ul>
+        <div class="badges"><span class="kbd">Java</span><span class="kbd">DSA</span><span class="kbd">SQL</span><span class="kbd">Soft Skills</span></div>
+      </div>
+    </section>
+
+    <!-- New: Tech Fests -->
+    <section>
+      <h2>Tech Fests — Top 5 Highlights (of 30+)</h2>
+      <ul>
+        <li>Finalist — State Hackathon (Year): Led 4-member team; built X; ranked Top-N.</li>
+        <li>Winner — Campus Code Sprint (Year): Designed Y; improved Z metric by NN% in demo.</li>
+        <li>Runner-up — Innovation Challenge (Year): Prototype A; judges’ pick for impact.</li>
+        <li>Speaker — “Power Apps for Student Projects” (Year): 100+ attendees; hands-on demo.</li>
+        <li>Organizer — Inter-college Tech Fest (Year): 20+ events; 300+ participants.</li>
+      </ul>
+    </section>
+
+    <!-- New: Microsoft Certifications -->
+    <section>
+      <h2>Microsoft Certifications</h2>
+      <ul>
+        <li>Microsoft Certified — Data Analyst (Associate)</li>
+        <li>Microsoft Certified — Azure AI Fundamentals (AI-900) — In Progress</li>
+      </ul>
+    </section>
+
+    <!-- New: Volunteer Work -->
+    <section>
+      <h2>Volunteer Work</h2>
+      <div class="item">
+        <h3>Co-founder — Mathrubhumi Foundation</h3>
+        <div class="meta">Focus: Free education for poor/orphaned students</div>
+        <ul>
+          <li>Launched tutoring and materials support; coordinated mentors and donors.</li>
+        </ul>
+        <div class="badges"><span class="kbd">Nonprofit</span><span class="kbd">Education</span><span class="kbd">Community</span></div>
+      </div>
+    </section>
+
+    <!-- New: Memberships & Clubs -->
+    <section>
+      <h2>Memberships & Clubs</h2>
+      <ul>
+        <li>Member — Cancer awareness initiatives</li>
+        <li>Member — Computer Science foundations (Trine University)</li>
+        <li>Clubs — Kansas Cricket Premier League, Midwest Cricket Leagues</li>
+      </ul>
+    </section>
+
+    <!-- New: Philosophy & Motivation -->
+    <section>
+      <h2>Philosophy & Motivation</h2>
+      <p>Philosopher and motivator — especially for students from village backgrounds. I run sessions on confidence, career paths, and “zero-to-one” mindset: start from scratch, build consistently, lead with accountability.</p>
+    </section>
+
+    <!-- Footer -->
+    <p class="footer">© <span id="y"></span> Anjaneyulu Javisetty — Built on GitHub Pages</p>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>  
