@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Anjaneyulu Javisetty — Software Engineer | AI + Automation + Power Platform</title>
+  <title>Anjaneyulu Javisetty — Java Full-Stack Engineer | Power Platform | AI Automation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Anjaneyulu Javisetty — Software Engineer building AI, automation, Power Platform solutions, Java services and real-world impact initiatives." />
+  <meta name="description" content="Anjaneyulu Javisetty — Java Full-Stack Engineer with Power Platform and AI automation experience. Clear timeline from 2015–2025: personal innovation, professional work, mentorship, education, and leadership." />
 
-  <meta property="og:title" content="Anjaneyulu Javisetty — Software Engineer | AI + Automation" />
-  <meta property="og:description" content="Projects, innovation, mentorship, social impact and engineering work by Anjaneyulu." />
+  <meta property="og:title" content="Anjaneyulu Javisetty — Java Full-Stack Engineer | Power Platform | AI" />
+  <meta property="og:description" content="Timeline 2015–2025: personal innovation, enterprise engineering, mentorship impact, master's education, and community leadership." />
   <meta property="og:type" content="website" />
-  <!-- ✅ UPDATED: Use your GitHub Pages site root URL (change only if your live site URL is different) -->
   <meta property="og:url" content="https://javisetty03.github.io/" />
   <meta property="og:image" content="assets/og-image.png" />
 
   <link rel="icon" href="assets/favicon.ico" />
 
-  <!-- Google Analytics -->
+  <!-- Google Analytics (keep if you use it) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGZ9D89GSK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -25,45 +24,108 @@
   </script>
 
   <style>
-    :root {
+    :root{
       --bg:#0b1220; --card:#121a2b; --text:#e6eefc; --muted:#9fb3d1; --accent:#0a84ff; --chip:#1a2740;
+      --border:#17243f; --soft:#0f1a31;
     }
     *{ box-sizing:border-box; }
     html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
     a{ color:var(--accent); text-decoration:none; } a:hover{ text-decoration:underline; }
     .container{ max-width:980px; margin:0 auto; padding:32px 20px 80px; }
-    header{ display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-bottom:28px; }
-    header img{ width:84px; height:84px; border-radius:14px; object-fit:cover; border:1px solid #1c2a46; }
+
+    header{ display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-bottom:18px; }
+    header img{ width:86px; height:86px; border-radius:14px; object-fit:cover; border:1px solid var(--border); }
     .title{ flex:1; min-width:260px; }
     h1{ margin:0 0 6px; font-size:28px; }
-    .subtitle{ color:var(--muted); font-weight:500; }
-    .links{ display:flex; flex-wrap:wrap; gap:12px; margin-top:8px; }
-    .chip{ background:var(--chip); padding:8px 12px; border-radius:999px; display:inline-flex; gap:8px; align-items:center; color:var(--text); }
+    .subtitle{ color:var(--muted); font-weight:600; line-height:1.35; }
+
+    .links{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+    .chip{
+      background:var(--chip);
+      padding:8px 12px;
+      border-radius:999px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      color:var(--text);
+      border:1px solid rgba(255,255,255,0.04);
+    }
 
     .grid{ display:grid; grid-template-columns:1fr; gap:16px; }
     @media (min-width:860px){ .grid{ grid-template-columns:1fr 1fr; } }
 
-    section{ background:var(--card); border:1px solid #17243f; border-radius:16px; padding:20px; }
+    section{ background:var(--card); border:1px solid var(--border); border-radius:16px; padding:20px; }
     h2{ margin:0 0 12px; font-size:18px; color:#d7e6ff; }
-    ul{ margin:8px 0 0 18px; }
-    li{ margin:6px 0; }
+    p{ margin:10px 0; color:#dbe7ff; line-height:1.6; }
 
-    .item{ padding:10px 0; border-top:1px solid #17243f; }
+    ul{ margin:8px 0 0 18px; }
+    li{ margin:7px 0; color:#dbe7ff; line-height:1.55; }
+
+    .badges{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .kbd{
+      background:var(--soft);
+      border:1px solid #243a6a;
+      padding:4px 8px;
+      border-radius:8px;
+      font-size:12px;
+      color:#cfe0ff;
+    }
+
+    .item{ padding:14px 0; border-top:1px solid var(--border); }
     .item:first-child{ border-top:none; }
     .item h3{ margin:0 0 6px; font-size:16px; color:#e9f1ff; }
-    .meta{ color:var(--muted); font-size:13px; display:flex; gap:8px; flex-wrap:wrap; }
-    .badges{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
-    .kbd{ background:#0f1a31; border:1px solid #243a6a; padding:4px 8px; border-radius:8px; font-size:12px; color:#cfe0ff; }
+    .meta{ color:var(--muted); font-size:13px; display:flex; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
 
+    .timeline{ display:grid; gap:14px; }
+    .tcard{
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.05);
+      border-radius:14px;
+      padding:14px;
+    }
+    .trow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:baseline;
+      margin-bottom:6px;
+    }
+    .year{
+      font-weight:700;
+      color:#e9f1ff;
+      background:#0d1931;
+      border:1px solid #243a6a;
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:0.2px;
+    }
+    .phase{ color:#d7e6ff; font-weight:700; }
+    .note{ color:var(--muted); font-size:13px; margin-top:10px; }
+
+    .divider{ height:1px; background:var(--border); margin:14px 0; opacity:0.85; }
     .footer{ margin-top:20px; color:var(--muted); font-size:13px; text-align:center; }
-    .spacer{ height:10px; }
+
+    /* Small helper for “Do not mix” clarity */
+    .callout{
+      margin-top:12px;
+      padding:12px;
+      border-radius:14px;
+      background:#0d1931;
+      border:1px solid #243a6a;
+      color:#dbe7ff;
+      font-size:13px;
+      line-height:1.5;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
 
-    <!-- HEADER -->
+    <!-- =======================
+         HEADER / HERO
+         ======================= -->
     <header>
       <img src="https://raw.githubusercontent.com/javisetty03/ajavisetty.github.io/main/assets/IMG_7120.jpeg"
            alt="Profile Photo"
@@ -71,54 +133,128 @@
 
       <div class="title">
         <h1>Anjaneyulu Javisetty</h1>
-        <div class="subtitle">Software Engineer — AI + Automation + Power Platform | Kansas City, USA</div>
+        <div class="subtitle">
+          Java Full-Stack Engineer • Spring Boot • REST APIs • SQL<br/>
+          Power Platform (Power Apps/Automate/Dataverse) • AI Automation • Kansas City, USA
+        </div>
 
         <div class="links">
           <a class="chip" href="mailto:javisetty03@gmail.com">📧 javisetty03@gmail.com</a>
-
-          <!-- ✅ UPDATED: click-to-call -->
           <a class="chip" href="tel:+17818167779">📞 +1 (781) 816-7779</a>
-
-          <!-- ✅ UPDATED: rel="noopener" for security -->
           <a class="chip" href="https://www.linkedin.com/in/aj-048a0b144/" target="_blank" rel="noopener">🔗 LinkedIn</a>
 
-          <!-- ✅ UPDATED: Direct PDF link via GitHub Pages + download attribute -->
-          <a class="chip" href="resume/Anjaneyulu_AJ%20(1).pdf" target="_blank" rel="noopener" download>⬇️ Résumé</a>
+          <!-- Rename your PDF to avoid 404 issues (no spaces/parentheses) -->
+          <a class="chip" href="resume/Anjaneyulu_Javisetty_Resume.pdf" target="_blank" rel="noopener" download>⬇️ Résumé</a>
+
+          <!-- Optional: use your existing folder for artifacts -->
+          <a class="chip" href="work-samples/" target="_blank" rel="noopener">📂 Work Samples</a>
         </div>
       </div>
     </header>
 
-    <!-- ABOUT -->
+    <!-- =======================
+         TOP SUMMARY (FAST SCAN)
+         ======================= -->
     <div class="grid">
       <section>
-        <h2>About Me</h2>
-        <p>I am a Software Engineer with experience building AI-enabled systems using Java, Power Platform, Azure AI, and automation workflows — and a track record of creating real-world impact.</p>
-
-        <ul>
-          <li>Built enterprise systems on Microsoft stack (Power Apps, Power Automate, Dataverse, Azure AI).</li>
-          <li>Zero-to-one builder who starts from scratch, executes, and scales solutions.</li>
-          <li>Mentored over 20,000 students and enabled pathways for rural learners into IT careers.</li>
-        </ul>
+        <h2>Who I Am (in 20 seconds)</h2>
+        <p>
+          I’m a builder from 2015 to today—starting with personal innovation projects in B.Tech,
+          then professional engineering work from 2019, social impact through VIEW (2020–22),
+          a Master’s in 2022–23, and continuing enterprise delivery + leadership through 2025.
+        </p>
 
         <div class="badges">
-          <span class="kbd">Java</span><span class="kbd">Power Apps</span><span class="kbd">Azure AI</span>
-          <span class="kbd">Automation</span><span class="kbd">Dataverse</span><span class="kbd">Microservices</span>
+          <span class="kbd">Java</span><span class="kbd">Spring Boot</span><span class="kbd">REST</span><span class="kbd">SQL</span>
+          <span class="kbd">Microservices</span><span class="kbd">Power Apps</span><span class="kbd">Power Automate</span>
+          <span class="kbd">Dataverse</span><span class="kbd">Azure</span><span class="kbd">AI Automation</span>
+        </div>
+
+        <div class="callout">
+          <b>Important:</b> I keep personal achievements and professional work <b>separate</b> below (no mixing).
+          Each section stands on its own.
         </div>
       </section>
 
       <section>
-        <h2>Current Focus</h2>
-        <ul>
-          <li>AI-driven automation with Power Platform + Java APIs.</li>
-          <li>End-to-end intelligent application development.</li>
-          <li>Building systems that create opportunity and enable people.</li>
-        </ul>
+        <h2>Timeline Map (2015 → 2025)</h2>
+        <div class="timeline">
+
+          <div class="tcard">
+            <div class="trow">
+              <span class="year">2015–2019</span>
+              <span class="phase">B.Tech</span>
+            </div>
+            <div class="meta">Personal projects & achievements (identity layer)</div>
+          </div>
+
+          <div class="tcard">
+            <div class="trow">
+              <span class="year">2019</span>
+              <span class="phase">Work begins</span>
+            </div>
+            <div class="meta">Professional software engineering starts</div>
+          </div>
+
+          <div class="tcard">
+            <div class="trow">
+              <span class="year">2020–2022</span>
+              <span class="phase">VIEW initiative</span>
+            </div>
+            <div class="meta">Mentorship & community enablement (separate from job)</div>
+          </div>
+
+          <div class="tcard">
+            <div class="trow">
+              <span class="year">2022–2023</span>
+              <span class="phase">Master’s</span>
+            </div>
+            <div class="meta">Education phase</div>
+          </div>
+
+          <div class="tcard">
+            <div class="trow">
+              <span class="year">2023–Present</span>
+              <span class="phase">Professional work</span>
+            </div>
+            <div class="meta">Enterprise engineering + delivery</div>
+          </div>
+
+          <div class="tcard">
+            <div class="trow">
+              <span class="year">2025</span>
+              <span class="phase">Leadership</span>
+            </div>
+            <div class="meta">ACE XI cricket network (identity + leadership)</div>
+          </div>
+
+        </div>
       </section>
     </div>
 
-    <!-- PROJECTS -->
+    <!-- =======================
+         1) PROFESSIONAL (2019–PRESENT) — NO PERSONAL MIXING
+         ======================= -->
     <section>
-      <h2>Innovation & Projects</h2>
+      <h2>Professional Work (2019–Present)</h2>
+
+      <div class="item">
+        <h3>Enterprise Engineering — Java Full-Stack + Power Platform + AI Automation</h3>
+        <div class="meta">Professional experience only • (details in résumé)</div>
+        <ul>
+          <li>Java full-stack development (Spring Boot, REST APIs, SQL data modeling) for enterprise systems.</li>
+          <li>Power Platform delivery (Power Apps, Power Automate, Dataverse) for workflow automation and business applications.</li>
+          <li>AI automation for document workflows (intake, validation, extraction, monitoring, human review patterns).</li>
+        </ul>
+        <p class="note">This section intentionally stays professional. Personal achievements are shown below in separate sections.</p>
+      </div>
+    </section>
+
+    <!-- =======================
+         2) PERSONAL PROJECTS (2015–2019) — B.TECH ERA
+         ======================= -->
+    <section>
+      <h2>Personal Innovation Projects (2015–2019 • B.Tech)</h2>
 
       <div class="item">
         <h3>Accident Intimation Device (2015)</h3>
@@ -138,24 +274,40 @@
         </ul>
         <div class="badges"><span class="kbd">CivicTech</span><span class="kbd">Workflow</span></div>
       </div>
+    </section>
+
+    <!-- =======================
+         3) MENTORSHIP (2020–2022) — VIEW
+         ======================= -->
+    <section>
+      <h2>Mentorship & Enablement (2020–2022)</h2>
 
       <div class="item">
-        <h3>VIEW - Village IT Eligibility worker Readiness Movement (2020)</h3>
+        <h3>VIEW — Village IT Eligibility Worker Readiness Movement (2020–2022)</h3>
         <div class="meta">Community Empowerment</div>
         <ul>
-          <li>Created learning network helping rural students secure 100+ jobs in top IT firms.</li>
+          <li>Created a learning network helping rural students secure 100+ jobs in top IT firms.</li>
         </ul>
         <div class="badges"><span class="kbd">Mentorship</span><span class="kbd">Enablement</span></div>
       </div>
+    </section>
 
-      <div class="item">
-        <h3>Smart Work Locator (2022–24)</h3>
-        <div class="meta">Enterprise App | Power Apps + Azure</div>
-        <ul>
-          <li>Time-tracking, geofencing, compliance, dashboards, exports.</li>
-        </ul>
-        <div class="badges"><span class="kbd">Dataverse</span><span class="kbd">Azure</span></div>
-      </div>
+    <!-- =======================
+         4) EDUCATION (2022–2023) — MASTER'S
+         ======================= -->
+    <section>
+      <h2>Education (2022–2023)</h2>
+      <ul>
+        <li>Master in Information Studies — Trine University, Detroit, MI (2023)</li>
+        <li>Bachelor in CSE — Chalapathi Institute of Technology, India</li>
+      </ul>
+    </section>
+
+    <!-- =======================
+         5) LEADERSHIP (2025) — ACE XI
+         ======================= -->
+    <section>
+      <h2>Leadership & Community (2025)</h2>
 
       <div class="item">
         <h3>ACE XI Cricket Network (2025)</h3>
@@ -167,45 +319,44 @@
       </div>
     </section>
 
-    <!-- TRAINING -->
+    <!-- =======================
+         OPTIONAL: SMART WORK LOCATOR (IF YOU WANT IT AS IDENTITY)
+         Put it here ONLY IF you want it treated as your “product/project identity”
+         If you prefer it purely as work, remove this entire section.
+         ======================= -->
     <section>
-      <h2>Training & Mentorship</h2>
+      <h2>Product-Style Build (Identity Layer)</h2>
       <div class="item">
-        <h3>University Trainer & Career Coach</h3>
-        <div class="meta">20,000+ Students Coached</div>
+        <h3>Smart Work Locator (2022–2024)</h3>
+        <div class="meta">Enterprise App | Power Apps + Azure</div>
         <ul>
-          <li>Delivered workshops on Java, DSA, SQL, personal development, interview prep.</li>
+          <li>Time-tracking, geofencing, compliance, dashboards, exports.</li>
         </ul>
-        <div class="badges"><span class="kbd">Java</span><span class="kbd">Education</span></div>
+        <div class="badges"><span class="kbd">Dataverse</span><span class="kbd">Azure</span></div>
+        <p class="note">
+          If you want Smart Work Locator to be seen as part of your identity (not tied to employer),
+          keep it here. If you want it strictly “work”, move it under Professional Work only.
+        </p>
       </div>
     </section>
 
-    <!-- EDUCATION -->
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li>Master in Information Studies — Trine University, Detroit, MI (2023)</li>
-        <li>Bachelor in CSE — Chalapathi Institute of Technology, India</li>
-      </ul>
-    </section>
-
-    <!-- CERTIFICATIONS -->
+    <!-- =======================
+         CERTIFICATIONS (OPTIONAL ON PORTFOLIO)
+         ======================= -->
     <section>
       <h2>Certifications</h2>
       <ul>
         <li>Microsoft Certified — Data Analyst (Associate)</li>
         <li>Microsoft Certified — Azure AI Fundamentals (AI-900)</li>
+        <li>AWS Certified Cloud Practitioner</li>
       </ul>
     </section>
 
-    <!-- FOOTER -->
     <p class="footer">© <span id="y"></span> Anjaneyulu Javisetty — Portfolio</p>
-
   </div>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
