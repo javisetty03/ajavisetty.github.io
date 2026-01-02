@@ -2,296 +2,263 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Anjaneyulu Javisetty — Java Software Engineer | Spring Boot | Full-Stack</title>
+  <title>Anjaneyulu Javisetty — Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Anjaneyulu Javisetty — Java Software Engineer (Spring Boot, REST APIs, SQL, microservices) with experience in automation and AI-enabled workflows." />
-
-  <meta property="og:title" content="Anjaneyulu Javisetty — Java Software Engineer | Spring Boot | Full-Stack" />
-  <meta property="og:description" content="Portfolio with a clear 2015–2025 timeline: personal innovation, professional engineering, mentorship, education, and leadership." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://javisetty03.github.io/" />
-  <meta property="og:image" content="assets/og-image.png" />
-
+  <meta name="description" content="Anjaneyulu Javisetty — Java Software Engineer with experience in enterprise systems, microservices, APIs, documentation automation, and content management." />
   <link rel="icon" href="assets/favicon.ico" />
 
   <style>
-    :root{
-      --bg:#0b1220; --card:#121a2b; --text:#e6eefc; --muted:#9fb3d1; --accent:#0a84ff; --chip:#1a2740;
-      --border:#17243f; --soft:#0f1a31;
-      --java:#132548; --javaBorder:#2a4a86;
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b1220;color:#e6eefc}
+    .container{max-width:1000px;margin:auto;padding:32px 20px 80px}
+    h1{margin:0 0 6px}
+    h2{margin-top:40px;border-bottom:1px solid #1f2f52;padding-bottom:6px;color:#d7e6ff;scroll-margin-top:100px}
+    h3{margin-bottom:4px;color:#e9f1ff}
+    p{line-height:1.7;color:#dbe7ff;margin:10px 0}
+    ul{margin-top:8px}
+    li{margin-bottom:6px;line-height:1.55}
+    a{color:#7db4ff;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .header{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+    .leftHead{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .photo{
+      width:90px;height:90px;border-radius:14px;object-fit:cover;
+      border:1px solid #1f2f52;background:#121a2b;
     }
-    *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
-    a{ color:var(--accent); text-decoration:none; } a:hover{ text-decoration:underline; }
-    .container{ max-width:980px; margin:0 auto; padding:32px 20px 80px; }
 
-    header{ display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-bottom:18px; }
-    header img{ width:86px; height:86px; border-radius:14px; object-fit:cover; border:1px solid var(--border); }
-    .title{ flex:1; min-width:260px; }
-    h1{ margin:0 0 6px; font-size:28px; }
-    .subtitle{ color:var(--muted); font-weight:650; line-height:1.35; }
-
-    .links{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+    .contact{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
     .chip{
-      background:var(--chip);
+      background:#121a2b;
+      border:1px solid #1f2f52;
       padding:8px 12px;
       border-radius:999px;
       display:inline-flex;
-      gap:8px;
       align-items:center;
-      color:var(--text);
-      border:1px solid rgba(255,255,255,0.04);
+      gap:8px;
+      color:#e6eefc;
+      text-decoration:none;
+      font-size:14px;
     }
+    .chip:hover{background:#15203a;text-decoration:none}
 
-    section{ background:var(--card); border:1px solid var(--border); border-radius:16px; padding:20px; }
-    h2{ margin:0 0 12px; font-size:18px; color:#d7e6ff; }
-    p{ margin:10px 0; color:#dbe7ff; line-height:1.6; }
-    ul{ margin:8px 0 0 18px; }
-    li{ margin:7px 0; color:#dbe7ff; line-height:1.55; }
+    .grid{display:grid;grid-template-columns:2.5fr 1.5fr;gap:24px;margin-top:18px}
+    @media (max-width:860px){.grid{grid-template-columns:1fr}}
 
-    .grid{ display:grid; grid-template-columns:1fr; gap:16px; }
-    @media (min-width:860px){ .grid{ grid-template-columns:1.15fr 0.85fr; } }
-
-    .badges{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
-    .kbd{
-      background:var(--soft);
-      border:1px solid #243a6a;
-      padding:4px 8px;
-      border-radius:8px;
-      font-size:12px;
-      color:#cfe0ff;
-    }
-    .kbd.primary{
-      background:var(--java);
-      border:1px solid var(--javaBorder);
-      color:#e9f1ff;
-      font-weight:650;
-    }
-
-    .item{ padding:14px 0; border-top:1px solid var(--border); }
-    .item:first-child{ border-top:none; }
-    .item h3{ margin:0 0 6px; font-size:16px; color:#e9f1ff; }
-    .meta{ color:var(--muted); font-size:13px; display:flex; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
-
-    .timeline{ display:grid; gap:12px; }
+    .timeline{display:grid;gap:10px}
     .tcard{
-      background:rgba(255,255,255,0.02);
-      border:1px solid rgba(255,255,255,0.05);
-      border-radius:14px;
-      padding:12px;
+      padding:10px 12px;border-left:3px solid #355c9a;background:#121a2b;border-radius:10px;
+      cursor:pointer; user-select:none;
     }
-    .trow{ display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; margin-bottom:6px; }
-    .year{
-      font-weight:700;
-      color:#e9f1ff;
-      background:#0d1931;
-      border:1px solid #243a6a;
-      padding:4px 10px;
-      border-radius:999px;
-      font-size:12px;
+    .tcard:hover{background:#15203a}
+
+    .meta{font-size:14px;color:#9fb3d1}
+    .company{margin-top:20px}
+
+    .skillsGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      margin-top:16px;
     }
-    .phase{ color:#d7e6ff; font-weight:750; }
-    .footer{ margin-top:20px; color:var(--muted); font-size:13px; text-align:center; }
+    @media (max-width:860px){.skillsGrid{grid-template-columns:1fr}}
   </style>
+
+  <script>
+    function goToSection(id){
+      const el = document.getElementById(id);
+      if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+    }
+  </script>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <!-- HEADER -->
-    <header>
-      <img src="https://raw.githubusercontent.com/javisetty03/ajavisetty.github.io/main/assets/IMG_7120.jpeg"
-           alt="Profile Photo"
+  <!-- HEADER -->
+  <div class="header">
+    <div class="leftHead">
+      <img class="photo"
+           src="https://raw.githubusercontent.com/javisetty03/ajavisetty.github.io/main/assets/IMG_7120.jpeg"
+           alt="Anjaneyulu Javisetty"
            onerror="this.style.display='none'">
-
-      <div class="title">
+      <div>
         <h1>Anjaneyulu Javisetty</h1>
-        <div class="subtitle">
-          Java Software Engineer (Full-Stack) • Spring Boot • REST APIs • SQL • Microservices<br/>
-          Kansas City, USA
-        </div>
-
-        <div class="links">
-          <a class="chip" href="mailto:javisetty03@gmail.com">📧 javisetty03@gmail.com</a>
-          <a class="chip" href="tel:+17818167779">📞 +1 (781) 816-7779</a>
-          <a class="chip" href="https://www.linkedin.com/in/aj-048a0b144/" target="_blank" rel="noopener">🔗 LinkedIn</a>
-          <a class="chip" href="resume/Anjaneyulu_Javisetty_Resume.pdf" target="_blank" rel="noopener" download>⬇️ Résumé</a>
-        </div>
+        <p style="margin:6px 0 0;">Software Engineer</p>
+        <p style="margin:6px 0 0;">Kansas City, USA</p>
       </div>
-    </header>
-
-    <!-- SUMMARY + TIMELINE -->
-    <div class="grid">
-      <section>
-        <h2>About</h2>
-        <p>
-          I build enterprise software using Java and modern backend patterns—clean APIs, reliable services, and data-driven systems.
-          I also deliver automation and AI-enabled workflows when the problem benefits from it.
-        </p>
-
-        <div class="badges">
-          <span class="kbd primary">Java</span>
-          <span class="kbd primary">Spring Boot</span>
-          <span class="kbd primary">REST APIs</span>
-          <span class="kbd primary">SQL</span>
-          <span class="kbd primary">Microservices</span>
-          <span class="kbd">React / Angular</span>
-          <span class="kbd">JUnit / Mockito</span>
-          <span class="kbd">CI/CD</span>
-        </div>
-
-        <div class="badges" style="margin-top:8px;">
-          <span class="kbd">Azure</span>
-          <span class="kbd">Automation</span>
-          <span class="kbd">Power Apps</span>
-          <span class="kbd">Power Automate</span>
-          <span class="kbd">Dataverse</span>
-          <span class="kbd">AI Workflows</span>
-        </div>
-      </section>
-
-      <section>
-        <h2>Timeline (2015–2025)</h2>
-        <div class="timeline">
-          <div class="tcard">
-            <div class="trow"><span class="year">2015–2019</span><span class="phase">B.Tech</span></div>
-            <div class="meta">Personal projects and achievements</div>
-          </div>
-          <div class="tcard">
-            <div class="trow"><span class="year">2019</span><span class="phase">Work starts</span></div>
-            <div class="meta">Professional software engineering</div>
-          </div>
-          <div class="tcard">
-            <div class="trow"><span class="year">2020–2022</span><span class="phase">VIEW</span></div>
-            <div class="meta">Mentorship and community enablement</div>
-          </div>
-          <div class="tcard">
-            <div class="trow"><span class="year">2022–2023</span><span class="phase">Master’s</span></div>
-            <div class="meta">Education</div>
-          </div>
-          <div class="tcard">
-            <div class="trow"><span class="year">2023–Present</span><span class="phase">Work</span></div>
-            <div class="meta">Professional engineering</div>
-          </div>
-          <div class="tcard">
-            <div class="trow"><span class="year">2025</span><span class="phase">Leadership</span></div>
-            <div class="meta">Community and team building</div>
-          </div>
-        </div>
-      </section>
     </div>
 
-    <!-- PROFESSIONAL WORK -->
-    <section style="margin-top:16px;">
-      <h2>Professional Work</h2>
-      <div class="item">
-        <h3>Java Engineering (2019–Present)</h3>
-        <div class="meta">Spring Boot • APIs • Data • Microservices</div>
-        <ul>
-          <li>Built and maintained backend services and APIs for enterprise workflows and business systems.</li>
-          <li>Implemented production patterns like validation, pagination/filtering, structured logging, and error handling.</li>
-          <li>Delivered full-stack features when needed by integrating UI layers with Java services.</li>
-        </ul>
-      </div>
-
-      <div class="item">
-        <h3>Automation & AI Workflows</h3>
-        <div class="meta">Automation platforms • Cloud services</div>
-        <ul>
-          <li>Delivered workflow automation and AI-enabled document/process pipelines for operational efficiency.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- PERSONAL PROJECTS (B.TECH) -->
-    <section style="margin-top:16px;">
-      <h2>Personal Projects & Achievements (2015–2019)</h2>
-
-      <div class="item">
-        <h3>Accident Intimation Device (2015)</h3>
-        <div class="meta">Embedded + Emergency Alerting</div>
-        <ul>
-          <li>Designed a crash-detection device (8051 + GPS) long before commercial implementations.</li>
-          <li>Triggered real-time alerts to police, ambulance, and family contacts.</li>
-        </ul>
-        <div class="badges"><span class="kbd">IoT</span><span class="kbd">Embedded</span></div>
-      </div>
-
-      <div class="item">
-        <h3>Anti-Corruption Reporting Portal (2016)</h3>
-        <div class="meta">CivicTech | Transparency | C/C++</div>
-        <ul>
-          <li>Developed tree-based complaint routing and escalation tracking.</li>
-        </ul>
-        <div class="badges"><span class="kbd">CivicTech</span><span class="kbd">Workflow</span></div>
-      </div>
-    </section>
-
-    <!-- VIEW -->
-    <section style="margin-top:16px;">
-      <h2>VIEW (2020–2022)</h2>
-      <div class="item">
-        <h3>Village IT Eligibility Worker Readiness Movement</h3>
-        <div class="meta">Community Empowerment</div>
-        <ul>
-          <li>Created a learning network helping rural students secure 100+ jobs in top IT firms.</li>
-        </ul>
-        <div class="badges"><span class="kbd">Mentorship</span><span class="kbd">Enablement</span></div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section style="margin-top:16px;">
-      <h2>Education</h2>
-      <ul>
-        <li>Master in Information Studies — Trine University, Detroit, MI (2023)</li>
-        <li>Bachelor in CSE — Chalapathi Institute of Technology, India</li>
-      </ul>
-    </section>
-
-    <!-- LEADERSHIP -->
-    <section style="margin-top:16px;">
-      <h2>Leadership (2025)</h2>
-      <div class="item">
-        <h3>ACE XI Cricket Network</h3>
-        <div class="meta">Career + Sports Networking | Kansas Premier League</div>
-        <ul>
-          <li>Formed a competitive team connecting students with professionals and entrepreneurs.</li>
-        </ul>
-        <div class="badges"><span class="kbd">Leadership</span><span class="kbd">Collaboration</span></div>
-      </div>
-    </section>
-
-    <!-- SMART WORK LOCATOR (YOUR IDENTITY PROJECT) -->
-    <section style="margin-top:16px;">
-      <h2>Smart Work Locator (2022–2024)</h2>
-      <div class="item">
-        <h3>Enterprise App | Power Apps + Azure</h3>
-        <div class="meta">Time-tracking • Geofencing • Compliance • Dashboards • Exports</div>
-        <ul>
-          <li>Time-tracking, geofencing, compliance, dashboards, exports.</li>
-        </ul>
-        <div class="badges"><span class="kbd">Dataverse</span><span class="kbd">Azure</span></div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section style="margin-top:16px;">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Microsoft Certified — Data Analyst (Associate)</li>
-        <li>Microsoft Certified — Azure AI Fundamentals (AI-900)</li>
-        <li>AWS Certified Cloud Practitioner</li>
-      </ul>
-    </section>
-
-    <!-- FOOTER -->
-    <p class="footer">© <span id="y"></span> Anjaneyulu Javisetty — Portfolio</p>
+    <div class="contact">
+      <a class="chip" href="mailto:javisetty03@gmail.com">✉️ Email</a>
+      <a class="chip" href="tel:+17818167779">📞 Phone</a>
+      <a class="chip" href="https://www.linkedin.com/in/aj-048a0b144/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+      <a class="chip"
+         href="https://raw.githubusercontent.com/javisetty03/ajavisetty.github.io/main/assets/Anjaneyulu_Javisetty_Resume.pdf.pdf"
+         download
+         target="_blank"
+         rel="noopener">⬇️ Resume</a>
+    </div>
   </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <!-- ABOUT + TIMELINE -->
+  <div class="grid">
+    <div>
+      <h2 id="about">About</h2>
+      <p>
+        Software Engineer with 5+ years of experience building enterprise-grade applications using Java, Spring Boot,
+        REST APIs, SQL, and microservices. Experienced across banking, insurance, pensions, documentation automation,
+        and content management platforms, delivering reliable backend systems and full-stack features.
+      </p>
+      <p>
+        Strong focus on clean architecture, maintainable code, API design, and integration of enterprise platforms.
+        Alongside professional work, I have built long-running personal projects and community initiatives reflecting
+        ownership, consistency, and leadership.
+      </p>
+      <p>
+        Beyond my professional experience, I have consistently worked on self-initiated projects and community efforts
+        that reflect long-term curiosity, problem-solving, and leadership. From building an accident intimation device
+        during my undergraduate studies to creating civic-tech platforms and leading large-scale student mentorship
+        initiatives, these personal achievements represent my ability to identify real-world problems, take ownership,
+        and execute solutions independently alongside my engineering career.
+      </p>
+    </div>
+
+    <div>
+      <h2>Timeline</h2>
+      <div class="timeline">
+        <div class="tcard" onclick="goToSection('personal')">2015 – 2019: B.Tech & Personal Innovation</div>
+        <div class="tcard" onclick="goToSection('sopra')">2019 – 2022: Professional Work (Sopra Steria)</div>
+        <div class="tcard" onclick="goToSection('view')">2020 – 2022: VIEW Initiative</div>
+        <div class="tcard" onclick="goToSection('education')">2022 – 2023: Education</div>
+        <div class="tcard" onclick="goToSection('careerSoft')">2023 – Present: Professional Work (Career Soft)</div>
+        <div class="tcard" onclick="goToSection('leadership')">2025: Leadership & Community</div>
+        <div class="tcard" onclick="goToSection('certs')">Certifications</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <h2 id="skills">Skill Set</h2>
+  <div class="skillsGrid">
+    <div>
+      <h3>Programming & Backend</h3>
+      <ul>
+        <li>Java, Spring Boot, Spring MVC</li>
+        <li>RESTful API development</li>
+        <li>Microservices architecture</li>
+        <li>SQL (PostgreSQL, MySQL)</li>
+      </ul>
+
+      <h3>Frontend</h3>
+      <ul>
+        <li>React, Angular</li>
+        <li>HTML, CSS, JavaScript</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Enterprise Platforms & Tools</h3>
+      <ul>
+        <li>Power Apps, Power Automate, Dataverse</li>
+        <li>Salesforce</li>
+        <li>Mainframe-integrated systems</li>
+        <li>Documentation automation & content management</li>
+      </ul>
+
+      <h3>DevOps & Testing</h3>
+      <ul>
+        <li>Git, CI/CD pipelines</li>
+        <li>JUnit, Postman</li>
+        <li>Azure services</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <h2 id="experience">Professional Experience</h2>
+
+  <div class="company" id="careerSoft">
+    <h3>Career Soft Solutions</h3>
+    <div class="meta">Software Engineer → Sr Software Engineer | Aug 2023 – Present | USA</div>
+    <ul>
+      <li>Worked on enterprise projects involving documentation automation, banking platforms, and Java-based microservices.</li>
+      <li>Designed and developed backend services using Java, Spring Boot, REST APIs, and SQL-based data models.</li>
+      <li>Built and maintained microservices supporting business workflows and system integrations.</li>
+      <li>Client names and internal systems are not disclosed due to confidentiality agreements.</li>
+    </ul>
+  </div>
+
+  <div class="company" id="sopra">
+    <h3>Sopra Steria India Pvt Ltd</h3>
+    <div class="meta">Software Engineer | Dec 2019 – Feb 2022 | India</div>
+    <ul>
+      <li>Worked on insurance and pensions domain projects using Java full-stack technologies.</li>
+      <li>Developed Spring Boot applications, REST APIs, and backend integrations.</li>
+      <li>Contributed to internal and mainframe-integrated content management systems.</li>
+      <li>Projects included Capita, Aviva, SWL, Oncall Assist Portal, and VAutomate.</li>
+    </ul>
+  </div>
+
+  <div class="company" id="training">
+    <h3>Technical Training (Smart Training Resources & Freelancing)</h3>
+    <div class="meta">Jun 2019 – Dec 2019 | Feb 2022 – Jul 2022</div>
+    <ul>
+      <li>Delivered technical training on Java, Data Structures, SQL, and software engineering fundamentals.</li>
+      <li>Conducted hands-on coding sessions and interview preparation programs.</li>
+    </ul>
+  </div>
+
+  <div class="company" id="intern">
+    <h3>SS Lotus Global Soft Solutions</h3>
+    <div class="meta">Intern Engineer | Apr 2018 – Jun 2018</div>
+    <ul>
+      <li>Worked on website creation and maintenance for Varuna Organics.</li>
+      <li>Developed UI components using HTML, CSS, JavaScript, and Spring-based backend support.</li>
+    </ul>
+  </div>
+
+  <!-- PERSONAL -->
+  <h2 id="personal">Personal Achievements & Projects</h2>
+
+  <h3>Accident Intimation Device (2015)</h3>
+  <ul>
+    <li>Designed and built an embedded crash-detection system using an 8051 microcontroller and GPS.</li>
+    <li>Implemented automatic emergency alerting to police, ambulance, and family contacts.</li>
+    <li>Received recognition from IIT Bombay and national-level universities.</li>
+  </ul>
+
+  <h3>Anti-Corruption Reporting Portal (2016)</h3>
+  <ul>
+    <li>Developed a civic-tech portal for corruption complaint reporting.</li>
+    <li>Implemented tree-based routing and escalation logic.</li>
+  </ul>
+
+  <h3 id="view">VIEW – Village IT Eligibility Worker Readiness Movement (2020–2022)</h3>
+  <ul>
+    <li>Founded a community initiative supporting rural students entering IT careers.</li>
+    <li>Helped 100+ students secure jobs through mentorship and training in regional language at free of cost.</li>
+  </ul>
+
+  <h3 id="leadership">ACE XI Cricket Network (2025)</h3>
+  <ul>
+    <li>Founded and led a cricket network connecting students, professionals, and entrepreneurs.</li>
+  </ul>
+
+  <!-- EDUCATION -->
+  <h2 id="education">Education</h2>
+  <ul>
+    <li>Master in Information Studies — Trine University, USA (2023)</li>
+    <li>Bachelor in Computer Science & Engineering — Chalapathi Institute of Technology, India (2019)</li>
+  </ul>
+
+  <!-- CERTIFICATIONS -->
+  <h2 id="certs">Certifications</h2>
+  <ul>
+    <li>Microsoft Certified — Data Analyst (Associate)</li>
+    <li>Microsoft Certified — Azure AI Fundamentals</li>
+    <li>AWS Certified Cloud Practitioner</li>
+  </ul>
+
+</div>
 </body>
 </html>
