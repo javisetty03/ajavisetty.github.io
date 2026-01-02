@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <title>Anjaneyulu Javisetty — Java Software Engineer | Spring Boot | Full-Stack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Anjaneyulu Javisetty — Java Software Engineer (Spring Boot, REST APIs, SQL, microservices). Secondary: Power Platform automation. Also: AI document automation." />
+  <meta name="description" content="Anjaneyulu Javisetty — Java Software Engineer (Spring Boot, REST APIs, SQL, microservices) with experience in automation and AI-enabled workflows." />
 
   <meta property="og:title" content="Anjaneyulu Javisetty — Java Software Engineer | Spring Boot | Full-Stack" />
-  <meta property="og:description" content="Java-first portfolio with a clear 2015–2025 timeline: personal innovation, professional engineering, mentorship impact, education, and leadership." />
+  <meta property="og:description" content="Portfolio with a clear 2015–2025 timeline: personal innovation, professional engineering, mentorship, education, and leadership." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://javisetty03.github.io/" />
   <meta property="og:image" content="assets/og-image.png" />
@@ -18,8 +18,7 @@
     :root{
       --bg:#0b1220; --card:#121a2b; --text:#e6eefc; --muted:#9fb3d1; --accent:#0a84ff; --chip:#1a2740;
       --border:#17243f; --soft:#0f1a31;
-      --java:#132548;      /* subtle emphasis for Java group */
-      --javaBorder:#2a4a86;
+      --java:#132548; --javaBorder:#2a4a86;
     }
     *{ box-sizing:border-box; }
     html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
@@ -54,12 +53,6 @@
     .grid{ display:grid; grid-template-columns:1fr; gap:16px; }
     @media (min-width:860px){ .grid{ grid-template-columns:1.15fr 0.85fr; } }
 
-    .item{ padding:14px 0; border-top:1px solid var(--border); }
-    .item:first-child{ border-top:none; }
-    .item h3{ margin:0 0 6px; font-size:16px; color:#e9f1ff; }
-    .meta{ color:var(--muted); font-size:13px; display:flex; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
-    .note{ color:var(--muted); font-size:13px; margin-top:10px; }
-
     .badges{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
     .kbd{
       background:var(--soft);
@@ -69,7 +62,6 @@
       font-size:12px;
       color:#cfe0ff;
     }
-    /* Java badges visually stronger */
     .kbd.primary{
       background:var(--java);
       border:1px solid var(--javaBorder);
@@ -77,23 +69,17 @@
       font-weight:650;
     }
 
-    .callout{
-      margin-top:12px;
-      padding:12px;
-      border-radius:14px;
-      background:#0d1931;
-      border:1px solid #243a6a;
-      color:#dbe7ff;
-      font-size:13px;
-      line-height:1.5;
-    }
+    .item{ padding:14px 0; border-top:1px solid var(--border); }
+    .item:first-child{ border-top:none; }
+    .item h3{ margin:0 0 6px; font-size:16px; color:#e9f1ff; }
+    .meta{ color:var(--muted); font-size:13px; display:flex; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
 
-    .timeline{ display:grid; gap:14px; }
+    .timeline{ display:grid; gap:12px; }
     .tcard{
       background:rgba(255,255,255,0.02);
       border:1px solid rgba(255,255,255,0.05);
       border-radius:14px;
-      padding:14px;
+      padding:12px;
     }
     .trow{ display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; margin-bottom:6px; }
     .year{
@@ -104,10 +90,8 @@
       padding:4px 10px;
       border-radius:999px;
       font-size:12px;
-      letter-spacing:0.2px;
     }
     .phase{ color:#d7e6ff; font-weight:750; }
-
     .footer{ margin-top:20px; color:var(--muted); font-size:13px; text-align:center; }
   </style>
 </head>
@@ -115,7 +99,7 @@
 <body>
   <div class="container">
 
-    <!-- HERO -->
+    <!-- HEADER -->
     <header>
       <img src="https://raw.githubusercontent.com/javisetty03/ajavisetty.github.io/main/assets/IMG_7120.jpeg"
            alt="Profile Photo"
@@ -123,11 +107,9 @@
 
       <div class="title">
         <h1>Anjaneyulu Javisetty</h1>
-
-        <!-- ✅ Java-first headline (Power Platform is secondary) -->
         <div class="subtitle">
           Java Software Engineer (Full-Stack) • Spring Boot • REST APIs • SQL • Microservices<br/>
-          Secondary: Power Platform Automation • Also: AI Automation • Kansas City, USA
+          Kansas City, USA
         </div>
 
         <div class="links">
@@ -142,14 +124,12 @@
     <!-- SUMMARY + TIMELINE -->
     <div class="grid">
       <section>
-        <h2>Java-First Summary</h2>
+        <h2>About</h2>
         <p>
-          I’m a <b>Java software engineer</b> focused on building backend services and full-stack systems using
-          <b>Spring Boot</b>, <b>REST APIs</b>, <b>SQL</b>, and <b>microservices</b>.
-          I also build workflow automation using Power Platform when it fits the problem, and I’ve delivered AI-enabled document automation.
+          I build enterprise software using Java and modern backend patterns—clean APIs, reliable services, and data-driven systems.
+          I also deliver automation and AI-enabled workflows when the problem benefits from it.
         </p>
 
-        <!-- ✅ Java badges stronger; Power Platform badges normal -->
         <div class="badges">
           <span class="kbd primary">Java</span>
           <span class="kbd primary">Spring Boot</span>
@@ -157,87 +137,76 @@
           <span class="kbd primary">SQL</span>
           <span class="kbd primary">Microservices</span>
           <span class="kbd">React / Angular</span>
-          <span class="kbd">Testing (JUnit/Mockito)</span>
+          <span class="kbd">JUnit / Mockito</span>
           <span class="kbd">CI/CD</span>
         </div>
 
         <div class="badges" style="margin-top:8px;">
-          <span class="kbd">Power Apps</span><span class="kbd">Power Automate</span><span class="kbd">Dataverse</span>
-          <span class="kbd">Azure</span><span class="kbd">AI Automation</span>
-        </div>
-
-        <div class="callout">
-          <b>Separation rule:</b> Professional work is listed as professional. Personal achievements and identity initiatives are shown in their own timeline sections (2015–2025).
+          <span class="kbd">Azure</span>
+          <span class="kbd">Automation</span>
+          <span class="kbd">Power Apps</span>
+          <span class="kbd">Power Automate</span>
+          <span class="kbd">Dataverse</span>
+          <span class="kbd">AI Workflows</span>
         </div>
       </section>
 
       <section>
-        <h2>Timeline (2015 → 2025)</h2>
+        <h2>Timeline (2015–2025)</h2>
         <div class="timeline">
           <div class="tcard">
             <div class="trow"><span class="year">2015–2019</span><span class="phase">B.Tech</span></div>
-            <div class="meta">Personal projects & achievements</div>
+            <div class="meta">Personal projects and achievements</div>
           </div>
           <div class="tcard">
             <div class="trow"><span class="year">2019</span><span class="phase">Work starts</span></div>
-            <div class="meta">Professional software engineering begins</div>
+            <div class="meta">Professional software engineering</div>
           </div>
           <div class="tcard">
-            <div class="trow"><span class="year">2020–2022</span><span class="phase">VIEW initiative</span></div>
-            <div class="meta">Mentorship & community enablement</div>
+            <div class="trow"><span class="year">2020–2022</span><span class="phase">VIEW</span></div>
+            <div class="meta">Mentorship and community enablement</div>
           </div>
           <div class="tcard">
             <div class="trow"><span class="year">2022–2023</span><span class="phase">Master’s</span></div>
             <div class="meta">Education</div>
           </div>
           <div class="tcard">
-            <div class="trow"><span class="year">2023–Present</span><span class="phase">Professional work</span></div>
-            <div class="meta">Java SWE + secondary automation</div>
+            <div class="trow"><span class="year">2023–Present</span><span class="phase">Work</span></div>
+            <div class="meta">Professional engineering</div>
           </div>
           <div class="tcard">
             <div class="trow"><span class="year">2025</span><span class="phase">Leadership</span></div>
-            <div class="meta">ACE XI cricket network</div>
+            <div class="meta">Community and team building</div>
           </div>
         </div>
       </section>
     </div>
 
-    <!-- PROFESSIONAL (JAVA FIRST) -->
+    <!-- PROFESSIONAL WORK -->
     <section style="margin-top:16px;">
-      <h2>Professional Experience (Java-first)</h2>
-
+      <h2>Professional Work</h2>
       <div class="item">
-        <h3>Java Full-Stack / Backend Engineering (2019–Present)</h3>
-        <div class="meta">Spring Boot • REST APIs • SQL • Microservices • CI/CD • Testing</div>
+        <h3>Java Engineering (2019–Present)</h3>
+        <div class="meta">Spring Boot • APIs • Data • Microservices</div>
         <ul>
-          <li>Designed and built backend services and APIs for enterprise workflows, data access, and business rule enforcement.</li>
-          <li>Developed scalable service patterns (pagination/filtering, validation, logging, error handling) for production systems.</li>
-          <li>Integrated UI layers (React/Angular) with Java services where required for full-stack delivery.</li>
-        </ul>
-        <p class="note">Power Platform and AI are used as supporting tools when the business problem benefits from them.</p>
-      </div>
-
-      <div class="item">
-        <h3>Secondary Skill: Power Platform Automation</h3>
-        <div class="meta">Power Apps • Power Automate • Dataverse</div>
-        <ul>
-          <li>Built business-facing workflow automation and approvals connected to backend services.</li>
-          <li>Modeled Dataverse tables and integrated flows with APIs for end-to-end automation.</li>
+          <li>Built and maintained backend services and APIs for enterprise workflows and business systems.</li>
+          <li>Implemented production patterns like validation, pagination/filtering, structured logging, and error handling.</li>
+          <li>Delivered full-stack features when needed by integrating UI layers with Java services.</li>
         </ul>
       </div>
 
       <div class="item">
-        <h3>Also: AI Automation (Document / Process)</h3>
-        <div class="meta">Azure AI / Cognitive Services • Automation workflows</div>
+        <h3>Automation & AI Workflows</h3>
+        <div class="meta">Automation platforms • Cloud services</div>
         <ul>
-          <li>Delivered document processing workflows for intake, validation, extraction, and audit-ready status tracking.</li>
+          <li>Delivered workflow automation and AI-enabled document/process pipelines for operational efficiency.</li>
         </ul>
       </div>
     </section>
 
-    <!-- PERSONAL (B.TECH) -->
+    <!-- PERSONAL PROJECTS (B.TECH) -->
     <section style="margin-top:16px;">
-      <h2>Personal Projects & Achievements (2015–2019 • B.Tech)</h2>
+      <h2>Personal Projects & Achievements (2015–2019)</h2>
 
       <div class="item">
         <h3>Accident Intimation Device (2015)</h3>
@@ -261,10 +230,9 @@
 
     <!-- VIEW -->
     <section style="margin-top:16px;">
-      <h2>Mentorship & Social Impact (2020–2022)</h2>
-
+      <h2>VIEW (2020–2022)</h2>
       <div class="item">
-        <h3>VIEW — Village IT Eligibility Worker Readiness Movement</h3>
+        <h3>Village IT Eligibility Worker Readiness Movement</h3>
         <div class="meta">Community Empowerment</div>
         <ul>
           <li>Created a learning network helping rural students secure 100+ jobs in top IT firms.</li>
@@ -275,7 +243,7 @@
 
     <!-- EDUCATION -->
     <section style="margin-top:16px;">
-      <h2>Education (2022–2023)</h2>
+      <h2>Education</h2>
       <ul>
         <li>Master in Information Studies — Trine University, Detroit, MI (2023)</li>
         <li>Bachelor in CSE — Chalapathi Institute of Technology, India</li>
@@ -284,10 +252,9 @@
 
     <!-- LEADERSHIP -->
     <section style="margin-top:16px;">
-      <h2>Leadership & Community (2025)</h2>
-
+      <h2>Leadership (2025)</h2>
       <div class="item">
-        <h3>ACE XI Cricket Network (2025)</h3>
+        <h3>ACE XI Cricket Network</h3>
         <div class="meta">Career + Sports Networking | Kansas Premier League</div>
         <ul>
           <li>Formed a competitive team connecting students with professionals and entrepreneurs.</li>
@@ -296,23 +263,20 @@
       </div>
     </section>
 
-    <!-- OPTIONAL: SMART WORK LOCATOR (choose where you want it) -->
+    <!-- SMART WORK LOCATOR (YOUR IDENTITY PROJECT) -->
     <section style="margin-top:16px;">
-      <h2>Product Build (Optional Identity Layer)</h2>
+      <h2>Smart Work Locator (2022–2024)</h2>
       <div class="item">
-        <h3>Smart Work Locator (2022–2024)</h3>
-        <div class="meta">Enterprise App | Power Apps + Azure</div>
+        <h3>Enterprise App | Power Apps + Azure</h3>
+        <div class="meta">Time-tracking • Geofencing • Compliance • Dashboards • Exports</div>
         <ul>
           <li>Time-tracking, geofencing, compliance, dashboards, exports.</li>
         </ul>
         <div class="badges"><span class="kbd">Dataverse</span><span class="kbd">Azure</span></div>
-        <p class="note">
-          Keep it here only if you want it presented as a product you built (identity). If you want it purely as “work”, remove this block and reference it only in Professional Experience.
-        </p>
       </div>
     </section>
 
-    <!-- CERTS -->
+    <!-- CERTIFICATIONS -->
     <section style="margin-top:16px;">
       <h2>Certifications</h2>
       <ul>
@@ -322,6 +286,7 @@
       </ul>
     </section>
 
+    <!-- FOOTER -->
     <p class="footer">© <span id="y"></span> Anjaneyulu Javisetty — Portfolio</p>
   </div>
 
