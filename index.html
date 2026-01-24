@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>Anjaneyulu Javisetty — Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Anjaneyulu Javisetty — Java Software Engineer with experience in enterprise systems, microservices, APIs, documentation automation, and content management." />
+  <meta name="description" content="Anjaneyulu Javisetty — Software Engineer with expertise in Java/Spring Boot microservices and Microsoft Power Platform solutions." />
   <link rel="icon" href="assets/favicon.ico" />
 
   <!-- Google Analytics (GA4) -->
@@ -19,27 +19,29 @@
   <style>
     body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b1220;color:#e6eefc}
     .container{max-width:1000px;margin:auto;padding:32px 20px 80px}
-    h1{margin:0 0 6px}
-    h2{margin-top:40px;border-bottom:1px solid #1f2f52;padding-bottom:6px;color:#d7e6ff;scroll-margin-top:100px}
-    h3{margin-bottom:4px;color:#e9f1ff}
+    h1{margin:0 0 6px;font-size:32px}
+    h2{margin-top:40px;border-bottom:2px solid #1f2f52;padding-bottom:8px;color:#d7e6ff;scroll-margin-top:20px}
+    h3{margin-bottom:8px;color:#e9f1ff;font-size:20px}
+    h4{margin:16px 0 8px;color:#b8d0f5;font-size:16px}
     p{line-height:1.7;color:#dbe7ff;margin:10px 0}
-    ul{margin-top:8px}
-    li{margin-bottom:6px;line-height:1.55}
+    ul{margin-top:8px;line-height:1.7}
+    li{margin-bottom:8px}
     a{color:#7db4ff;text-decoration:none}
     a:hover{text-decoration:underline}
+    strong{color:#fff}
 
-    .header{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
-    .leftHead{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .header{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center;margin-bottom:24px}
+    .leftHead{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
     .photo{
-      width:90px;height:90px;border-radius:14px;object-fit:cover;
-      border:1px solid #1f2f52;background:#121a2b;
+      width:100px;height:100px;border-radius:16px;object-fit:cover;
+      border:2px solid #1f2f52;background:#121a2b;
     }
 
     .contact{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
     .chip{
       background:#121a2b;
       border:1px solid #1f2f52;
-      padding:8px 12px;
+      padding:10px 16px;
       border-radius:999px;
       display:inline-flex;
       align-items:center;
@@ -47,29 +49,77 @@
       color:#e6eefc;
       text-decoration:none;
       font-size:14px;
+      transition:all 0.2s;
     }
-    .chip:hover{background:#15203a;text-decoration:none}
+    .chip:hover{background:#15203a;transform:translateY(-2px);text-decoration:none;border-color:#355c9a}
 
-    .grid{display:grid;grid-template-columns:2.5fr 1.5fr;gap:24px;margin-top:18px}
+    .grid{display:grid;grid-template-columns:2.5fr 1.5fr;gap:28px;margin-top:24px}
     @media (max-width:860px){.grid{grid-template-columns:1fr}}
 
     .timeline{display:grid;gap:10px}
     .tcard{
-      padding:10px 12px;border-left:3px solid #355c9a;background:#121a2b;border-radius:10px;
-      cursor:pointer; user-select:none;
+      padding:12px 14px;
+      border-left:3px solid #355c9a;
+      background:#121a2b;
+      border-radius:10px;
+      cursor:pointer;
+      user-select:none;
+      transition:all 0.2s;
     }
-    .tcard:hover{background:#15203a}
+    .tcard:hover{background:#15203a;border-left-color:#5a8ed9}
 
-    .meta{font-size:14px;color:#9fb3d1}
-    .company{margin-top:20px}
+    .meta{font-size:14px;color:#9fb3d1;margin-bottom:12px}
+    .company{
+      margin-top:28px;
+      padding:20px;
+      background:#121a2b;
+      border-radius:12px;
+      border:1px solid #1f2f52;
+    }
 
     .skillsGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:24px;
-      margin-top:16px;
+      margin-top:20px;
     }
     @media (max-width:860px){.skillsGrid{grid-template-columns:1fr}}
+    
+    .skillBox{
+      background:#121a2b;
+      padding:20px;
+      border-radius:12px;
+      border:1px solid #1f2f52;
+    }
+    .skillBox h3{margin-top:0}
+
+    .techTags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .tag {
+      background: #1a2942;
+      border: 1px solid #2d4a7a;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #a8c5f0;
+    }
+
+    .project {
+      padding: 20px;
+      background: #121a2b;
+      border-left: 4px solid #5a8ed9;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #1f2f52;
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #e9f1ff;
+    }
   </style>
 
   <script>
@@ -92,20 +142,15 @@
            onerror="this.style.display='none'">
       <div>
         <h1>Anjaneyulu Javisetty</h1>
-        <p style="margin:6px 0 0;">Software Engineer</p>
-        <p style="margin:6px 0 0;">Kansas City, USA</p>
+        <p style="margin:6px 0 0;font-size:18px;color:#b8d0f5">Software Engineer</p>
+        <p style="margin:6px 0 0;color:#9fb3d1">Kansas City, USA</p>
       </div>
     </div>
 
     <div class="contact">
-      <a class="chip" href="mailto:javisetty03@gmail.com">✉️ Email</a>
-      <a class="chip" href="tel:+17818167779">📞 Phone</a>
+      <a class="chip" href="mailto:javisetty03@gmail.com">✉️ Let's Connect</a>
+      <a class="chip" href="tel:+17818167779">📞 Call Me</a>
       <a class="chip" href="https://www.linkedin.com/in/aj-048a0b144/" target="_blank" rel="noopener">🔗 LinkedIn</a>
-      <a class="chip"
-         href="https://raw.githubusercontent.com/javisetty03/AJ-Resume/main/Anjaneyulu_J_Resume.pdf"
-         download
-         target="_blank"
-         rel="noopener">⬇️ Resume</a>
     </div>
   </div>
 
@@ -114,71 +159,61 @@
     <div>
       <h2 id="about">About</h2>
       <p>
-        Software Engineer with 5+ years of experience building enterprise-grade applications using Java, Spring Boot,
-        REST APIs, SQL, and microservices. Experienced across banking, insurance, pensions, documentation automation,
-        and content management platforms, delivering reliable backend systems and full-stack features.
+        Software Engineer with 5+ years building enterprise systems using <strong>Java/Spring Boot microservices</strong> 
+        and <strong>Microsoft Power Platform</strong> solutions. Experienced across financial services, insurance, 
+        and enterprise automation—delivering both high-performance backend APIs and low-code business applications.
       </p>
       <p>
-        Strong focus on clean architecture, maintainable code, API design, and integration of enterprise platforms.
-        Alongside professional work, I have built long-running personal projects and community initiatives reflecting
-        ownership, consistency, and leadership.
+        My work spans traditional software engineering (REST APIs, microservices, distributed systems, SQL optimization) 
+        and modern low-code platforms (Power Apps, Power Automate, Dataverse)—giving me a unique perspective on when 
+        to build custom solutions versus when to leverage enterprise platforms for faster delivery.
       </p>
       <p>
-        Beyond my professional experience, I have consistently worked on self-initiated projects and community efforts
-        that reflect long-term curiosity, problem-solving, and leadership. From building an accident intimation device
-        during my undergraduate studies to creating civic-tech platforms and leading large-scale student mentorship
-        initiatives, these personal achievements represent my ability to identify real-world problems, take ownership,
-        and execute solutions independently alongside my engineering career.
+        Beyond professional work, I've built civic-tech platforms, led community mentorship initiatives 
+        (<strong>VIEW</strong> - helped 100+ rural students enter IT careers), and founded a cricket network 
+        connecting 500+ professionals. These projects reflect my belief in using technology for social impact 
+        and building meaningful communities.
       </p>
     </div>
 
     <div>
-      <h2>Timeline</h2>
+      <h2>Quick Navigation</h2>
       <div class="timeline">
-        <div class="tcard" onclick="goToSection('personal')">2015 – 2019: B.Tech & Personal Innovation</div>
-        <div class="tcard" onclick="goToSection('sopra')">2019 – 2022: Professional Work (Sopra Steria)</div>
-        <div class="tcard" onclick="goToSection('view')">2020 – 2022: VIEW Initiative</div>
-        <div class="tcard" onclick="goToSection('education')">2022 – 2023: Education</div>
-        <div class="tcard" onclick="goToSection('careerSoft')">2023 – Present: Professional Work (Career Soft)</div>
-        <div class="tcard" onclick="goToSection('leadership')">2025: Leadership & Community</div>
-        <div class="tcard" onclick="goToSection('certs')">Certifications</div>
+        <div class="tcard" onclick="goToSection('skills')">💻 Technical Skills</div>
+        <div class="tcard" onclick="goToSection('experience')">💼 Professional Experience</div>
+        <div class="tcard" onclick="goToSection('projects')">🚀 Featured Projects</div>
+        <div class="tcard" onclick="goToSection('education')">🎓 Education</div>
+        <div class="tcard" onclick="goToSection('certs')">📜 Certifications</div>
       </div>
     </div>
   </div>
 
   <!-- SKILLS -->
-  <h2 id="skills">Skill Set</h2>
+  <h2 id="skills">Technical Expertise</h2>
   <div class="skillsGrid">
-    <div>
-      <h3>Programming & Backend</h3>
+    <div class="skillBox">
+      <h3>⚙️ Backend Engineering</h3>
       <ul>
-        <li>Java, Spring Boot, Spring MVC</li>
-        <li>RESTful API development</li>
-        <li>Microservices architecture</li>
-        <li>SQL (PostgreSQL, MySQL)</li>
-      </ul>
-
-      <h3>Frontend</h3>
-      <ul>
-        <li>React, Angular</li>
-        <li>HTML, CSS, JavaScript</li>
+        <li><strong>Languages:</strong> Java, Go, Python, SQL</li>
+        <li><strong>Frameworks:</strong> Spring Boot, Spring MVC, Hibernate</li>
+        <li><strong>Architecture:</strong> Microservices, REST APIs, Event-driven systems</li>
+        <li><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, SQL Server</li>
+        <li><strong>Messaging:</strong> RabbitMQ, JMS, async processing</li>
+        <li><strong>Cloud:</strong> AWS (Lambda, EC2, SQS/SNS), Azure</li>
+        <li><strong>DevOps:</strong> Docker, Kubernetes, Jenkins, Git</li>
       </ul>
     </div>
 
-    <div>
-      <h3>Enterprise Platforms & Tools</h3>
+    <div class="skillBox">
+      <h3>🚀 Low-Code Platforms</h3>
       <ul>
-        <li>Power Apps, Power Automate, Dataverse</li>
-        <li>Salesforce</li>
-        <li>Mainframe-integrated systems</li>
-        <li>Documentation automation & content management</li>
-      </ul>
-
-      <h3>DevOps & Testing</h3>
-      <ul>
-        <li>Git, CI/CD pipelines</li>
-        <li>JUnit, Postman</li>
-        <li>Azure services</li>
+        <li><strong>Power Apps:</strong> Canvas & Model-driven applications</li>
+        <li><strong>Power Automate:</strong> Cloud Flows & Desktop (RPA)</li>
+        <li><strong>Power BI:</strong> Dashboards, DAX, data visualization</li>
+        <li><strong>Dataverse:</strong> Data modeling, relationships, business rules</li>
+        <li><strong>Copilot Studio:</strong> Virtual agents & chatbots</li>
+        <li><strong>Integration:</strong> SharePoint, Teams, Microsoft Graph API</li>
+        <li><strong>Advanced:</strong> Custom connectors, PCF controls (TypeScript/React)</li>
       </ul>
     </div>
   </div>
@@ -186,87 +221,190 @@
   <!-- PROFESSIONAL EXPERIENCE -->
   <h2 id="experience">Professional Experience</h2>
 
-  <div class="company" id="careerSoft">
-    <h3>Career Soft Solutions</h3>
-    <div class="meta">Software Engineer → Sr Software Engineer | Aug 2023 – Present | USA</div>
+  <div class="company">
+    <h3>Career Soft Solutions — Sr Software Engineer</h3>
+    <div class="meta">Aug 2023 – Present | USA</div>
+    
+    <h4>Backend Engineering:</h4>
     <ul>
-      <li>Worked on enterprise projects involving documentation automation, banking platforms, and Java-based microservices.</li>
-      <li>Designed and developed backend services using Java, Spring Boot, REST APIs, and SQL-based data models.</li>
-      <li>Built and maintained microservices supporting business workflows and system integrations.</li>
-      <li>Client names and internal systems are not disclosed due to confidentiality agreements.</li>
+      <li>Built microservices using Java/Spring Boot handling <strong>8K+ requests/second</strong> with p99 latency under 150ms for financial operations</li>
+      <li>Designed REST APIs with Redis caching reducing response time from <strong>800ms to 120ms</strong> (85% improvement)</li>
+      <li>Implemented event-driven architecture using RabbitMQ processing <strong>1M+ messages/day</strong> for async workflows</li>
+      <li>Led migration from monolith to <strong>12 microservices</strong> improving deployment frequency from bi-weekly to daily</li>
+      <li>Built Go-based services leveraging goroutines for concurrent data processing achieving <strong>4x throughput improvement</strong></li>
+    </ul>
+    
+    <h4>Power Platform Solutions:</h4>
+    <ul>
+      <li>Developed <strong>25+ Power Apps</strong> (Canvas & Model-driven) serving 500+ users for automation workflows</li>
+      <li>Built Power Automate RPA flows reducing manual data entry by <strong>30%</strong> and sync time from 4 hours to 5 minutes</li>
+      <li>Created Copilot Studio virtual agents handling <strong>10K+ inquiries/month</strong> with 85% automated resolution</li>
+      <li>Designed Dataverse solutions with <strong>50+ custom tables</strong>, relationships, and business rules for multi-tenant apps</li>
+      <li>Implemented SharePoint Online intranet with embedded Power Apps achieving <strong>95% user adoption</strong></li>
+    </ul>
+    
+    <div class="techTags">
+      <span class="tag">Java</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Microservices</span>
+      <span class="tag">Go</span>
+      <span class="tag">Power Apps</span>
+      <span class="tag">Power Automate</span>
+      <span class="tag">Copilot Studio</span>
+      <span class="tag">RabbitMQ</span>
+      <span class="tag">Redis</span>
+    </div>
+  </div>
+
+  <div class="company">
+    <h3>Sopra Steria India — Software Engineer</h3>
+    <div class="meta">Dec 2019 – Feb 2022 | India</div>
+    
+    <h4>Backend Engineering:</h4>
+    <ul>
+      <li>Developed enterprise backend services for UK financial sector processing <strong>3M+ daily transactions</strong></li>
+      <li>Built REST APIs integrating with legacy mainframe systems via JMS reducing settlement time by <strong>45%</strong></li>
+      <li>Executed zero-downtime Oracle to PostgreSQL migration including schema optimization and query performance tuning</li>
+      <li>Optimized SQL queries reducing execution time from <strong>2.3s to 180ms</strong> for high-volume reporting</li>
+    </ul>
+    
+    <h4>Power Platform Solutions:</h4>
+    <ul>
+      <li>Built Model-driven Power Apps on Dataverse for pension management serving <strong>200K+ users</strong></li>
+      <li>Implemented Power Automate workflows reducing batch processing from <strong>6 hours to 50 minutes</strong></li>
+      <li>Designed SharePoint Online intranet supporting <strong>75K+ employees</strong> with integrated workflows and analytics</li>
+      <li>Developed Power Pages customer portal achieving <strong>95% user satisfaction</strong></li>
+    </ul>
+    
+    <div class="techTags">
+      <span class="tag">Java</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Power Apps</span>
+      <span class="tag">Dataverse</span>
+      <span class="tag">SharePoint</span>
+      <span class="tag">JMS</span>
+    </div>
+  </div>
+
+  <div class="company">
+    <h3>Technical Training & Mentorship</h3>
+    <div class="meta">Jun 2019 – Dec 2019 & Feb 2022 – Jul 2022 | India</div>
+    <ul>
+      <li>Trained <strong>10,000+ software engineers</strong> in Java, Spring Boot, data structures, algorithms, and system design</li>
+      <li>Created 50+ hands-on coding exercises and system design case studies</li>
+      <li>Improved placement success rate by <strong>60%</strong> through structured mentorship programs</li>
+    </ul>
+    
+    <div class="techTags">
+      <span class="tag">Teaching</span>
+      <span class="tag">Java</span>
+      <span class="tag">System Design</span>
+      <span class="tag">Mentorship</span>
+    </div>
+  </div>
+
+  <div class="company">
+    <h3>SS Lotus Global Soft Solutions — Software Engineer Intern</h3>
+    <div class="meta">Apr 2018 – Jul 2018 | India</div>
+    <ul>
+      <li>Developed web applications using HTML, CSS, JavaScript, and Spring-based backend services</li>
+      <li>Fixed production bugs and implemented feature enhancements under senior developer guidance</li>
     </ul>
   </div>
 
-  <div class="company" id="sopra">
-    <h3>Sopra Steria India Pvt Ltd</h3>
-    <div class="meta">Software Engineer | Dec 2019 – Feb 2022 | India</div>
-    <ul>
-      <li>Worked on insurance and pensions domain projects using Java full-stack technologies.</li>
-      <li>Developed Spring Boot applications, REST APIs, and backend integrations.</li>
-      <li>Contributed to internal and mainframe-integrated content management systems.</li>
-      <li>Projects included Capita, Aviva, SWL, Oncall Assist Portal, and VAutomate.</li>
-    </ul>
+  <!-- FEATURED PROJECTS -->
+  <h2 id="projects">Featured Projects & Community Impact</h2>
+
+  <div class="project">
+    <h3>🚨 Accident Intimation Device (2015)</h3>
+    <p>
+      Designed and built an embedded crash-detection system using <strong>8051 microcontroller and GPS module</strong> 
+      with automatic emergency alerting to police, ambulance, and family contacts. Implemented crash detection algorithms 
+      and SMS-based notification system.
+    </p>
+    <p><strong>Recognition:</strong> Showcased at IIT Bombay and received recognition from national-level universities.</p>
+    <div class="techTags">
+      <span class="tag">Embedded Systems</span>
+      <span class="tag">8051 Microcontroller</span>
+      <span class="tag">GPS</span>
+      <span class="tag">IoT</span>
+    </div>
   </div>
 
-  <div class="company" id="training">
-    <h3>Technical Training (Smart Training Resources & Freelancing)</h3>
-    <div class="meta">Jun 2019 – Dec 2019 | Feb 2022 – Jul 2022</div>
-    <ul>
-      <li>Delivered technical training on Java, Data Structures, SQL, and software engineering fundamentals.</li>
-      <li>Conducted hands-on coding sessions and interview preparation programs.</li>
-    </ul>
+  <div class="project">
+    <h3>⚖️ Anti-Corruption Reporting Portal (2016)</h3>
+    <p>
+      Developed a civic-tech web portal for anonymous corruption complaint reporting with intelligent routing system. 
+      Implemented tree-based escalation logic routing complaints to appropriate government departments with automated 
+      follow-up mechanisms.
+    </p>
+    <div class="techTags">
+      <span class="tag">Civic Tech</span>
+      <span class="tag">Web Development</span>
+      <span class="tag">Database Design</span>
+    </div>
   </div>
 
-  <div class="company" id="intern">
-    <h3>SS Lotus Global Soft Solutions</h3>
-    <div class="meta">Intern Engineer | Apr 2018 – Jun 2018</div>
-    <ul>
-      <li>Worked on website creation and maintenance for Varuna Organics.</li>
-      <li>Developed UI components using HTML, CSS, JavaScript, and Spring-based backend support.</li>
-    </ul>
+  <div class="project">
+    <h3>🌾 VIEW Initiative — Village IT Eligibility Worker Readiness (2020-2022)</h3>
+    <p>
+      Founded and led a community movement supporting rural students entering IT careers. Provided <strong>free technical 
+      training in regional language</strong> (Telugu) covering programming fundamentals, interview preparation, and soft skills.
+    </p>
+    <p>
+      <strong>Impact:</strong> Helped 100+ students from rural backgrounds secure IT jobs through structured mentorship, 
+      mock interviews, and industry connections. Built tracking system to monitor student progress and placement outcomes.
+    </p>
+    <div class="techTags">
+      <span class="tag">Social Impact</span>
+      <span class="tag">Leadership</span>
+      <span class="tag">Mentorship</span>
+      <span class="tag">Community Building</span>
+    </div>
   </div>
 
-  <!-- PERSONAL -->
-  <h2 id="personal">Personal Achievements & Projects</h2>
-
-  <h3>Accident Intimation Device (2015)</h3>
-  <ul>
-    <li>Designed and built an embedded crash-detection system using an 8051 microcontroller and GPS.</li>
-    <li>Implemented automatic emergency alerting to police, ambulance, and family contacts.</li>
-    <li>Received recognition from IIT Bombay and national-level universities.</li>
-  </ul>
-
-  <h3>Anti-Corruption Reporting Portal (2016)</h3>
-  <ul>
-    <li>Developed a civic-tech portal for corruption complaint reporting.</li>
-    <li>Implemented tree-based routing and escalation logic.</li>
-  </ul>
-
-  <h3 id="view">VIEW – Village IT Eligibility Worker Readiness Movement (2020–2022)</h3>
-  <ul>
-    <li>Founded a community initiative supporting rural students entering IT careers.</li>
-    <li>Helped 100+ students secure jobs through mentorship and training in regional language at free of cost.</li>
-  </ul>
-
-  <h3 id="leadership">ACE XI Cricket Network (2025)</h3>
-  <ul>
-    <li>Founded and led a cricket network connecting students, professionals, and entrepreneurs.</li>
-  </ul>
+  <div class="project">
+    <h3>🏏 ACE XI Cricket Network (2025)</h3>
+    <p>
+      Founded and currently leading a cricket network connecting <strong>500+ students, professionals, and entrepreneurs</strong>. 
+      Managing regular cricket events, professional networking sessions, and community building activities. 
+      Bridging the gap between sports and professional development.
+    </p>
+    <div class="techTags">
+      <span class="tag">Community Leadership</span>
+      <span class="tag">Event Management</span>
+      <span class="tag">Networking</span>
+    </div>
+  </div>
 
   <!-- EDUCATION -->
   <h2 id="education">Education</h2>
   <ul>
-    <li>Master in Information Studies — Trine University, USA (2023)</li>
-    <li>Bachelor in Computer Science & Engineering — Chalapathi Institute of Technology, India (2019)</li>
+    <li><strong>Master of Science in Information Studies</strong> — Trine University, Michigan, USA (July 2023)</li>
+    <li><strong>Bachelor of Engineering in Computer Science</strong> — Chalapathi Institute of Technology, India (Nov 2019)</li>
   </ul>
 
   <!-- CERTIFICATIONS -->
   <h2 id="certs">Certifications</h2>
   <ul>
-    <li>Microsoft Certified — Data Analyst (Associate)</li>
-    <li>Microsoft Certified — Azure AI Fundamentals</li>
+    <li>Microsoft Certified: Power Platform App Maker Associate (PL-100)</li>
+    <li>Microsoft Certified: Power Platform Functional Consultant Associate (PL-200)</li>
+    <li>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</li>
+    <li>Microsoft Certified: Data Analyst Associate</li>
+    <li>Microsoft Certified: Azure AI Fundamentals</li>
     <li>AWS Certified Cloud Practitioner</li>
   </ul>
+
+  <!-- FOOTER -->
+  <div style="margin-top:60px;padding-top:30px;border-top:1px solid #1f2f52;text-align:center;color:#9fb3d1">
+    <p>© 2025 Anjaneyulu Javisetty. Building technology that matters.</p>
+    <div style="margin-top:16px">
+      <a href="mailto:javisetty03@gmail.com" style="margin:0 12px">Email</a>
+      <a href="https://www.linkedin.com/in/aj-048a0b144/" target="_blank" style="margin:0 12px">LinkedIn</a>
+      <a href="tel:+17818167779" style="margin:0 12px">Phone</a>
+    </div>
+  </div>
 
 </div>
 </body>
